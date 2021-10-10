@@ -1,0 +1,53 @@
+./shuffler dataSets/circles.txt dataSets/01fluence/ 1667
+./shuffler dataSets/circles.txt dataSets/02fluence/ 3334
+./shuffler dataSets/circles.txt dataSets/03fluence/ 5001
+./shuffler dataSets/circles.txt dataSets/04fluence/ 6668
+./shuffler dataSets/circles.txt dataSets/05fluence/ 8335
+./shuffler dataSets/circles.txt dataSets/10fluence/ 16670
+./shuffler dataSets/circles.txt dataSets/15fluence/ 25005
+./shuffler dataSets/circles.txt dataSets/20fluence/ 33340
+./shuffler dataSets/circles.txt dataSets/25fluence/ 41675
+./shuffler dataSets/circles.txt dataSets/30fluence/ 50010
+./shuffler dataSets/circles.txt dataSets/35fluence/ 58345
+./shuffler dataSets/circles.txt dataSets/40fluence/ 66680
+./shuffler dataSets/circles.txt dataSets/45fluence/ 75015
+./shuffler dataSets/circles.txt dataSets/50fluence/ 83350
+./shuffler dataSets/circles.txt dataSets/55fluence/ 91685
+./shuffler dataSets/circles.txt dataSets/60fluence/ 100020
+./shuffler dataSets/circles.txt dataSets/65fluence/ 108355
+./shuffler dataSets/circles.txt dataSets/70fluence/ 116690
+./shuffler dataSets/circles.txt dataSets/75fluence/ 125025
+./shuffler dataSets/circles.txt dataSets/80fluence/ 133360
+./shuffler dataSets/circles.txt dataSets/85fluence/ 141695
+./shuffler dataSets/circles.txt dataSets/90fluence/ 150030
+./shuffler dataSets/circles.txt dataSets/95fluence/ 158365
+./shuffler dataSets/circles.txt dataSets/100fluence/ 166700
+echo "data generated"
+for i in {0..199}
+do 
+	sed -i '$d' dataSets/01fluence/$i.txt
+	sed -i '$d' dataSets/02fluence/$i.txt
+	sed -i '$d' dataSets/03fluence/$i.txt
+	sed -i '$d' dataSets/04fluence/$i.txt
+	sed -i '$d' dataSets/05fluence/$i.txt
+	sed -i '$d' dataSets/10fluence/$i.txt
+	sed -i '$d' dataSets/15fluence/$i.txt
+	sed -i '$d' dataSets/20fluence/$i.txt
+	sed -i '$d' dataSets/25fluence/$i.txt
+	sed -i '$d' dataSets/30fluence/$i.txt
+	sed -i '$d' dataSets/35fluence/$i.txt
+	sed -i '$d' dataSets/40fluence/$i.txt
+	sed -i '$d' dataSets/45fluence/$i.txt
+	sed -i '$d' dataSets/50fluence/$i.txt
+	sed -i '$d' dataSets/55fluence/$i.txt
+	sed -i '$d' dataSets/60fluence/$i.txt
+	sed -i '$d' dataSets/65fluence/$i.txt
+	sed -i '$d' dataSets/70fluence/$i.txt
+	sed -i '$d' dataSets/75fluence/$i.txt
+	sed -i '$d' dataSets/80fluence/$i.txt
+	sed -i '$d' dataSets/85fluence/$i.txt
+	sed -i '$d' dataSets/90fluence/$i.txt
+	sed -i '$d' dataSets/95fluence/$i.txt
+	sed -i '$d' dataSets/100fluence/$i.txt
+done
+echo "finished script"
