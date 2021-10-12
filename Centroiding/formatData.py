@@ -1,5 +1,4 @@
-#You need to set the path according to the file system on your PC, this is the file path for mine, yours will be different
-path = 'C:\\Users\\jacwh\\eclipse-workspace\\dataparser\\Data\\'
+path = "data/"
 
 with open(path + 'fiber_values.txt') as f:
     content = f.readlines()[1:]

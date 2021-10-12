@@ -4,11 +4,12 @@ fiberMap parseFiber(fiberMap map, std::string filename) {
 	ifstream inFile(filename);
 	string txt;
 	getline(inFile,txt);
-
-	while (!inFile.eof() ) {
+	
+	while (!inFile.eof()) {
 		mapKey keyTemp;
 		fiberVal valTemp;
 		getline(inFile,txt);
+		if (inFile.eof()) break;
 		keyTemp.id = stoi(txt);
 		getline(inFile,txt);
 		keyTemp.layer = stoi(txt);
@@ -104,6 +105,7 @@ fiberMap parseRaw(fiberMap map, std::string filename) {
 		float x,y,z,e;
 		string mat;
 		getline(inFile,txt);
+		if (inFile.eof()) break;
 		id = stoi(txt);
 		getline(inFile, txt);
 		x = stof(txt);
@@ -142,9 +144,9 @@ fiberMap parseRaw(fiberMap map, std::string filename) {
 }
 // Compare the Maps for accuracy
 int compareMaps(fiberMap rawMap, fiberMap averageMap, fiberMap fibers) {
-	std::ofstream outFile("data\\output.txt");
-	std::ofstream matFileX("data\\toMatlabX.txt");
-	std::ofstream matFileY("data\\toMatlabY.txt");
+	std::ofstream outFile("data/output.txt");
+	std::ofstream matFileX("data/toMatlabX.txt");
+	std::ofstream matFileY("data/toMatlabY.txt");
 	int zeros = 0, more = 0, flags = 0, flagsTrue = 0, noMap = 0, bad = 0;
 	// Iterate through Averaged Map
 	for (auto i : averageMap) {
